@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>可见‑红外双模态多场景细粒度识别</title>
+<style>
+/* ====== 基础布局 ====== */
+:root{--c-text:#222;--c-sub:#555;--c-border:#d0d0d0;--c-accent:#0b5fff}
+@media (prefers-color-scheme:dark){
+  :root{--c-text:#f5f5f5;--c-sub:#aaa;--c-border:#444;--c-accent:#6fa8ff;background:#121212}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif;line-height:1.6;color:var(--c-text)}
+main{max-width:960px;margin:auto;padding:3rem 1rem;display:flex;flex-direction:column;gap:4rem}
+h1{font-size:clamp(2rem,5vw,3rem);font-weight:600;text-align:center;line-height:1.3}
+h2{font-size:1.6rem;font-weight:600;margin-bottom:.5rem;text-align:center}
+p,small{font-size:1rem;color:var(--c-sub)}
+section{display:flex;flex-direction:column;gap:1rem}
+.flex-center{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.card{border:1px solid var(--c-border);border-radius:12px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.card video,.card img{display:block;width:100%;height:auto}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1rem;border:2px dashed var(--c-border);padding:2rem;border-radius:16px;color:var(--c-sub);text-align:center}
+/* ====== 响应式 ====== */
+@media (min-width:768px){.videos{grid-template-columns:1fr 1fr}}
+/* ====== QR 容器 ====== */
+.qr-box{display:flex;flex-direction:column;align-items:center;gap:.5rem}
+canvas{height:128px;width:128px}
+</style>
+</head>
+<body>
+<main>
+  <!-- 标题区 -->
+  <section>
+    <h1>可见‑红外双模态<br>多场景细粒度识别</h1>
+    <p style="text-align:center">Visible&nbsp;&amp;&nbsp;Infrared Dual‑Modal Fine‑Grained Recognition across Diverse Scenes</p>
+    <div class="flex-center" style="font-size:.9rem">
+      <span>作者：张三</span><span>单位：某某大学</span><span>日期：2025‑04</span>
+    </div>
+  </section>
+
+  <!-- 摘要 -->
+  <section>
+    <h2>摘要</h2>
+    <p>
+      本项目针对复杂矿山环境中的低光照、高对比度与遮挡问题，提出可见‑红外双模态融合网络，实现多目标细粒度识别，提升矿山安全管理的实时感知能力。
+    </p>
+  </section>
+
+  <!-- 视频对比 -->
+  <section>
+    <h2>可见 vs. 红外 视频演示</h2>
+    <div class="videos" style="display:grid;gap:1.5rem">
+      <div class="card"><video controls><source src="videos/visible.mp4" type="video/mp4">浏览器不支持 video 标签</video></div>
+      <div class="card"><video controls><source src="videos/infrared.mp4" type="video/mp4">浏览器不支持 video 标签</video></div>
+    </div>
+  </section>
+
+  <!-- 媒体画廊占位 -->
+  <section>
+    <h2>媒体画廊（留作扩展）</h2>
+    <div class="gallery">
+      在此处拖拽或插入更多图片 / GIF
+    </div>
+  </section>
+
+  <!-- QR 码 -->
+  <section class="qr-box">
+    <h2>扫码访问演示</h2>
+    <canvas id="qr"></canvas>
+    <small id="qr-url"></small>
+  </section>
+</main>
+
+<!-- ===== QR 生成脚本（使用 qrjs 库，无依赖）===== -->
+<script>
+// 轻量二维码生成（https://github.com/davidshimjs/qrcodejs 源码精简）
+function makeQR(el, text){const qr=new QRCode(el,{text,text,correctLevel:QRCode.CorrectLevel.M});}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+  // 根据部署情况调整此 URL
+  const siteURL = window.location.href; // 或写死 'https://example.com'
+  document.getElementById('qr-url').textContent = siteURL;
+  new QRCode(document.getElementById('qr'), { text: siteURL, width:128, height:128 });
+</script>
+</body>
+</html>
+
