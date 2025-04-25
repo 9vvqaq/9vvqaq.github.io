@@ -59,29 +59,62 @@ canvas{height:128px;width:128px}
 
 <section>
   <h2>媒体演示与流程图</h2>
-  <div class="gallery">
-    <!-- 流程图模块 -->
-    <div class="card">
+  <div class="enhanced-gallery">
+    <!-- 全宽流程图模块 -->
+    <div class="full-width-card">
       <img src="videos/image.png" 
-           alt="多模态融合流程图">
-      <p class="caption" style="text-align:center; padding:1rem; font-size:0.9em">
-        图1: 多模态融合技术流程图，结合Cross Transformer实现可见光与红外图像的特征级融合
-      </p>
+           alt="项目流程图">
+      <p class="caption">图1: 项目技术流程图，结合Cross Transformer和细粒度方法实现可见光与红外图像的特征级融合与联合分类判别，同时使用可解释性技术提升人机交互。项目基于此开发了UI平台，演示如下。</p>
     </div>
 
-    <!-- UI演示视频模块 -->
-    <div class="card">
-      <video controls style="background:#000">
+    <!-- 全宽视频模块 -->
+    <div class="full-width-card">
+      <video controls>
         <source src="videos/ui-demo.mp4" type="video/mp4">
         您的浏览器不支持视频标签
       </video>
-      <p class="caption" style="text-align:center; padding:1rem; font-size:0.9em">
-        视频1: 用户界面交互演示，支持参数配置、数据上传与实时推理结果可视化
-      </p>
+      <p class="caption">视频1: 用户界面交互演示，支持参数配置、数据上传与实时推理结果可视化</p>
     </div>
   </div>
 </section>
 
+<style>
+/* 增强型样式 */
+.enhanced-gallery {
+  display: grid;
+  gap: 2.5rem;
+  padding: 1rem 0;
+}
+
+.full-width-card {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.full-width-card img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.full-width-card video {
+  width: 100%;
+  height: 560px;
+  background: #000;
+}
+
+.caption {
+  padding: 1rem 0;
+  color: var(--c-sub);
+  text-align: center;
+  border-bottom: 1px solid var(--c-border);
+  margin-bottom: 1.5rem;
+}
+</style>
+
+  
   <!-- QR 码 -->
   <section class="qr-box">
     <h2>其它功能维护中......谢谢观看！</h2>
