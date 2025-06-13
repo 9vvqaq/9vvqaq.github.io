@@ -30,111 +30,315 @@ canvas{height:128px;width:128px}
 </style>
 </head>
 <body>
-<main>
-  <!-- 标题区 -->
+  <!-- 导航菜单 -->
+  <nav class="nav-menu">
+    <div class="nav-container">
+      <div class="nav-logo">项目展示</div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">主页</a>
+        <a href="poster.html" class="nav-link">海报</a>
+        <a href="slides.html" class="nav-link">PPT</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 标题区 -->
+    <section>
+      <h1>多模态融合的工程机械细粒度识别系统：<br>面向新质生产力的多场景精细化工程管理解决方案</h1>
+      <p style="text-align:center">Visible&nbsp;&amp;&nbsp;Infrared Dual‑Modal Fine‑Grained Recognition across Diverse Scenes</p>
+      <div class="flex-center" style="font-size:.9rem">
+        <span>负责人：高天宇</span><span>小组成员：李世龙 杜昀瑾</span><span>学院：四川大学电气工程学院/化学工程学院</span><span>日期：2025‑04</span>
+      </div>
+    </section>
+
+    <!-- 滚动文字 -->
+    <section class="marquee-section">
+      <marquee behavior="scroll" direction="left" scrollamount="5">
+        <span class="marquee-text">欢迎访问我们的项目展示页面！本项目致力于通过多模态融合技术提升工程管理的智能化水平。</span>
+      </marquee>
+    </section>
+
+    <!-- 项目信息表格 -->
+    <section>
+      <h2>项目信息</h2>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th>项目名称</th>
+            <th>负责人</th>
+            <th>完成时间</th>
+            <th>项目状态</th>
+          </tr>
+          <tr>
+            <td>多模态融合的工程机械细粒度识别系统UI平台</td>
+            <td>李世龙</td>
+            <td>2025-04</td>
+            <td>进行中</td>
+          </tr>
+          <tr>
+            <td>可见光与红外图像融合</td>
+            <td>高天宇</td>
+            <td>2025-04</td>
+            <td>已完成</td>
+          </tr>
+          <tr>
+            <td>细粒度分类算法</td>
+            <td>高天宇</td>
+            <td>2025-04</td>
+            <td>已完成</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- 相关链接 -->
+    <section>
+      <h2>相关链接</h2>
+      <div class="links-container">
+        <a href="https://github.com/9vvqaq/9vvqaq.github.io" target="_blank" class="link-card">
+          <span class="link-icon">📚</span>
+          <span class="link-text">GitHub 仓库</span>
+        </a>
+        <a href="https://www.scu.edu.cn" target="_blank" class="link-card">
+          <span class="link-icon">🏫</span>
+          <span class="link-text">四川大学官网</span>
+        </a>
+        <a href="https://ee.scu.edu.cn/" target="_blank" class="link-card">
+          <span class="link-icon">⚡</span>
+          <span class="link-text">电气工程学院</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 摘要 -->
+    <section>
+      <h2>摘要</h2>
+      <p>
+        本项目聚焦新质生产力发展，通过多模态融合与细粒度分类技术提升工程管理的智能化水平。针对矿井、黑夜等低光环境，采用针对性数据增强，并使用基于多模态可见光与红外图像结合的Cross Transformer改进方法，增强特征提取能力。将目标定位后，使用基于ViT骨干网络设计ABFS和ECL模块，实现工程机械品牌与型号的高精度识别。项目创新性提出多阶段数据增强策略，结合自适应MSRCR与CLAHE算法优化低光场景下的检测性能。项目成果在细粒度分类与目标检测任务中均超越现有先进方法，并利用Grad-CAM技术增强模型可解释性，促进人机信任。应用场景覆盖常规工地、极端天气及地下工程，助力机械调度、设备维护与安全监控。相关研究已投稿至SCI一区期刊，并开发了用户友好的UI系统，推动AI驱动的工程管理精准化与可持续发展。
+      </p>
+    </section>
+
+    <!-- 视频对比 -->
+    <section>
+      <h2>可见/红外 联合目标识别与分类 视频演示</h2>
+      <div class="videos" style="display:grid;gap:1.5rem">
+        <div class="card"><video controls><source src="videos/visible.mp4" type="video/mp4">浏览器不支持 video 标签</video></div>
+        <div class="card"><video controls><source src="videos/infrared.mp4" type="video/mp4">浏览器不支持 video 标签</video></div>
+      </div>
+    </section>
+
   <section>
-    <h1>多模态融合的工程机械细粒度识别系统：<br>面向新质生产力的多场景精细化工程管理解决方案</h1>
-    <p style="text-align:center">Visible&nbsp;&amp;&nbsp;Infrared Dual‑Modal Fine‑Grained Recognition across Diverse Scenes</p>
-    <div class="flex-center" style="font-size:.9rem">
-      <span>负责人：高天宇</span><span>小组成员：李世龙 杜昀瑾</span><span>学院：四川大学电气工程学院/化学工程学院</span><span>日期：2025‑04</span>
+    <h2>媒体演示与流程图</h2>
+    <div class="enhanced-gallery">
+      <!-- 全宽流程图模块 -->
+      <div class="full-width-card">
+        <img src="videos/image.png" 
+             alt="项目流程图">
+        <p class="caption">图1: 项目技术流程图，结合Cross Transformer和细粒度方法实现可见光与红外图像的特征级融合与联合分类判别，同时使用可解释性技术提升人机交互。项目基于此开发了UI平台，演示如下。</p>
+      </div>
+
+      <!-- 全宽视频模块 -->
+      <div class="full-width-card">
+        <video controls>
+          <source src="videos/ui-demo.mp4" type="video/mp4">
+          您的浏览器不支持视频标签
+        </video>
+        <p class="caption">视频1: 用户界面交互演示，支持参数配置、数据上传与实时推理结果可视化</p>
+      </div>
     </div>
   </section>
 
-  <!-- 摘要 -->
-  <section>
-    <h2>摘要</h2>
-    <p>
-      本项目聚焦新质生产力发展，通过多模态融合与细粒度分类技术提升工程管理的智能化水平。针对矿井、黑夜等低光环境，采用针对性数据增强，并使用基于多模态可见光与红外图像结合的Cross Transformer改进方法，增强特征提取能力。将目标定位后，使用基于ViT骨干网络设计ABFS和ECL模块，实现工程机械品牌与型号的高精度识别。项目创新性提出多阶段数据增强策略，结合自适应MSRCR与CLAHE算法优化低光场景下的检测性能。项目成果在细粒度分类与目标检测任务中均超越现有先进方法，并利用Grad-CAM技术增强模型可解释性，促进人机信任。应用场景覆盖常规工地、极端天气及地下工程，助力机械调度、设备维护与安全监控。相关研究已投稿至SCI一区期刊，并开发了用户友好的UI系统，推动AI驱动的工程管理精准化与可持续发展。
-    </p>
-  </section>
+  <style>
+  /* 增强型样式 */
+  .enhanced-gallery {
+    display: grid;
+    gap: 2.5rem;
+    padding: 1rem 0;
+  }
 
-  <!-- 视频对比 -->
-  <section>
-    <h2>可见/红外 联合目标识别与分类 视频演示</h2>
-    <div class="videos" style="display:grid;gap:1.5rem">
-      <div class="card"><video controls><source src="videos/visible.mp4" type="video/mp4">浏览器不支持 video 标签</video></div>
-      <div class="card"><video controls><source src="videos/infrared.mp4" type="video/mp4">浏览器不支持 video 标签</video></div>
-    </div>
-  </section>
+  .full-width-card {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
 
-<section>
-  <h2>媒体演示与流程图</h2>
-  <div class="enhanced-gallery">
-    <!-- 全宽流程图模块 -->
-    <div class="full-width-card">
-      <img src="videos/image.png" 
-           alt="项目流程图">
-      <p class="caption">图1: 项目技术流程图，结合Cross Transformer和细粒度方法实现可见光与红外图像的特征级融合与联合分类判别，同时使用可解释性技术提升人机交互。项目基于此开发了UI平台，演示如下。</p>
-    </div>
+  .full-width-card img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+  }
 
-    <!-- 全宽视频模块 -->
-    <div class="full-width-card">
-      <video controls>
-        <source src="videos/ui-demo.mp4" type="video/mp4">
-        您的浏览器不支持视频标签
-      </video>
-      <p class="caption">视频1: 用户界面交互演示，支持参数配置、数据上传与实时推理结果可视化</p>
-    </div>
-  </div>
-</section>
+  .full-width-card video {
+    width: 100%;
+    height: 560px;
+    background: #000;
+  }
 
-<style>
-/* 增强型样式 */
-.enhanced-gallery {
-  display: grid;
-  gap: 2.5rem;
-  padding: 1rem 0;
-}
+  .caption {
+    padding: 1rem 0;
+    color: var(--c-sub);
+    text-align: center;
+    border-bottom: 1px solid var(--c-border);
+    margin-bottom: 1.5rem;
+  }
 
-.full-width-card {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-}
+  /* 新增样式 */
+  .marquee-section {
+    background: var(--c-accent);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
 
-.full-width-card img {
-  width: 100%;
-  height: auto;
-  max-height: 70vh;
-  object-fit: contain;
-}
+  .marquee-text {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
 
-.full-width-card video {
-  width: 100%;
-  height: 560px;
-  background: #000;
-}
+  .table-container {
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
 
-.caption {
-  padding: 1rem 0;
-  color: var(--c-sub);
-  text-align: center;
-  border-bottom: 1px solid var(--c-border);
-  margin-bottom: 1.5rem;
-}
-</style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
 
-  
-  <!-- QR 码 -->
-  <section class="qr-box">
-    <h2>其它功能维护中......谢谢观看！</h2>
-    <canvas id="qr"></canvas>
-    <small id="qr-url"></small>
-  </section>
-</main>
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--c-border);
+  }
 
-<!-- ===== QR 生成脚本（使用 qrjs 库，无依赖）===== -->
-<script>
-// 轻量二维码生成（https://github.com/davidshimjs/qrcodejs 源码精简）
-function makeQR(el, text){const qr=new QRCode(el,{text,text,correctLevel:QRCode.CorrectLevel.M});}
-</script>
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-<script>
-  // 根据部署情况调整此 URL
-  const siteURL = window.location.href; // 或写死 'https://example.com'
-  document.getElementById('qr-url').textContent = siteURL;
-  new QRCode(document.getElementById('qr'), { text: siteURL, width:128, height:128 });
-</script>
+  th {
+    background: var(--c-accent);
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background: #f5f5f5;
+  }
+
+  .links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .link-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid var(--c-border);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--c-text);
+    transition: all 0.3s ease;
+  }
+
+  .link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-color: var(--c-accent);
+  }
+
+  .link-icon {
+    font-size: 1.5rem;
+  }
+
+  .link-text {
+    font-weight: 500;
+  }
+  </style>
+
+    
+    <!-- QR 码 -->
+    <section class="qr-box">
+      <h2>其它功能维护中......谢谢观看！</h2>
+      <canvas id="qr"></canvas>
+      <small id="qr-url"></small>
+    </section>
+  </main>
+
+  <!-- ===== QR 生成脚本（使用 qrjs 库，无依赖）===== -->
+  <script>
+  // 轻量二维码生成（https://github.com/davidshimjs/qrcodejs 源码精简）
+  function makeQR(el, text){const qr=new QRCode(el,{text,text,correctLevel:QRCode.CorrectLevel.M});}
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script>
+    // 根据部署情况调整此 URL
+    const siteURL = window.location.href; // 或写死 'https://example.com'
+    document.getElementById('qr-url').textContent = siteURL;
+    new QRCode(document.getElementById('qr'), { text: siteURL, width:128, height:128 });
+  </script>
+
+  <style>
+  /* 导航菜单样式 */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .nav-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--c-accent);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--c-text);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background: var(--c-accent);
+    color: white;
+  }
+
+  .nav-link.active {
+    background: var(--c-accent);
+    color: white;
+  }
+
+  /* 调整主内容区域的上边距，为固定导航栏留出空间 */
+  main {
+    margin-top: 4rem;
+  }
+  </style>
 </body>
 </html>
 
