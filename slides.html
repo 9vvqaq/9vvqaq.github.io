@@ -76,7 +76,7 @@ main {
 /* PPT容器样式 */
 .slides-container {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
   background: white;
@@ -91,17 +91,36 @@ main {
   border-radius: 8px;
 }
 
+.slide-images {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.slide-image-container {
+  flex: 1;
+  text-align: center;
+}
+
 .slide-image {
   width: 100%;
   height: auto;
   border-radius: 4px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.image-description {
+  font-size: 0.9rem;
+  color: var(--c-sub);
 }
 
 .slide-description {
   text-align: center;
   color: var(--c-sub);
   margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .slide-navigation {
@@ -147,18 +166,61 @@ main {
   <main>
     <h1>项目PPT</h1>
     <div class="slides-container">
-      <!-- 这里需要替换为您的实际PPT图片 -->
+      <!-- 项目概述 -->
       <div class="slide">
-        <img src="images/屏幕截图 2025-06-07 214510.png" alt="PPT第1页" class="slide-image">
         <p class="slide-description">项目概述</p>
+        <div class="slide-images">
+          <div class="slide-image-container">
+            <img src="images/overview1.png" alt="项目概述图1" class="slide-image">
+            <p class="image-description">系统架构</p>
+          </div>
+          <div class="slide-image-container">
+            <img src="images/overview2.png" alt="项目概述图2" class="slide-image">
+            <p class="image-description">应用场景</p>
+          </div>
+          <div class="slide-image-container">
+            <img src="images/overview3.png" alt="项目概述图3" class="slide-image">
+            <p class="image-description">主要功能</p>
+          </div>
+        </div>
       </div>
+
+      <!-- 技术方案 -->
       <div class="slide">
-        <img src="images/屏幕截图 2025-06-07 214547.png" alt="PPT第2页" class="slide-image">
         <p class="slide-description">技术方案</p>
+        <div class="slide-images">
+          <div class="slide-image-container">
+            <img src="images/tech1.png" alt="技术方案图1" class="slide-image">
+            <p class="image-description">模型架构</p>
+          </div>
+          <div class="slide-image-container">
+            <img src="images/tech2.png" alt="技术方案图2" class="slide-image">
+            <p class="image-description">算法流程</p>
+          </div>
+          <div class="slide-image-container">
+            <img src="images/tech3.png" alt="技术方案图3" class="slide-image">
+            <p class="image-description">关键技术</p>
+          </div>
+        </div>
       </div>
+
+      <!-- 实验结果 -->
       <div class="slide">
-        <img src="images/屏幕截图 2025-06-07 214630.png" alt="PPT第3页" class="slide-image">
         <p class="slide-description">实验结果</p>
+        <div class="slide-images">
+          <div class="slide-image-container">
+            <img src="images/result1.png" alt="实验结果图1" class="slide-image">
+            <p class="image-description">性能评估</p>
+          </div>
+          <div class="slide-image-container">
+            <img src="images/result2.png" alt="实验结果图2" class="slide-image">
+            <p class="image-description">对比实验</p>
+          </div>
+          <div class="slide-image-container">
+            <img src="images/result3.png" alt="实验结果图3" class="slide-image">
+            <p class="image-description">应用效果</p>
+          </div>
+        </div>
       </div>
       
       <div class="slide-navigation">
